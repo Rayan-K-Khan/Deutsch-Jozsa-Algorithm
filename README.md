@@ -1,10 +1,10 @@
-# ⚛️ Deutsch-Jozsa Algorithm — Quantum Computing
+# Deutsch-Jozsa Algorithm — Quantum Computing
 
 A quantum computing project implementing the **Deutsch-Jozsa algorithm** using IBM's **Qiskit** framework, demonstrating an exponential speedup over classical computation by classifying Boolean oracle functions as constant or balanced in a single query.
 
 ---
 
-## 📌 Project Overview
+## Project Overview
 
 | | |
 |---|---|
@@ -17,7 +17,7 @@ A quantum computing project implementing the **Deutsch-Jozsa algorithm** using I
 
 ---
 
-## 🧠 The Problem
+## The Problem
 
 Given a black-box function f: {0,1}ⁿ → {0,1}, determine whether f is:
 - **Constant** — returns the same value (all 0s or all 1s) for every input
@@ -27,7 +27,7 @@ Classically, this requires up to **2ⁿ⁻¹ + 1 queries** in the worst case. Th
 
 ---
 
-## ⚙️ Circuit Architecture
+## Circuit Architecture
 
 ### Step-by-Step Protocol
 
@@ -47,7 +47,7 @@ The ancilla qubit is prepared in the |−⟩ state (via X then H), which causes 
 
 ---
 
-## 🔬 Implementations
+## Implementations
 
 ### 1. Single-Qubit Deutsch (2-qubit circuit)
 A 2-qubit circuit (1 input + 1 ancilla) implementing all **4 possible 1-bit Boolean functions**:
@@ -77,7 +77,7 @@ Tested at **n = 5** (6-qubit circuit total); classified output as **Constant** w
 
 ---
 
-## 🛠️ Bonus: n-Qubit GHZ State
+## Bonus: n-Qubit GHZ State
 
 As a foundational warm-up, the notebook also implements a general **n-qubit GHZ state** builder:
 
@@ -94,7 +94,7 @@ Demonstrated on a **7-qubit GHZ state** — a maximally entangled state where al
 
 ---
 
-## 📊 Simulation & Visualization
+## Simulation & Visualization
 
 - Executed on **`FakeAlmadenV2`**, a noise-aware fake backend that mimics real IBM quantum hardware characteristics
 - Measurement outcomes plotted as **bar charts** (counts of `0` vs. `1` for the 1-qubit case; `all-zeros` vs. `not all-zeros` for the n-qubit case)
@@ -102,7 +102,7 @@ Demonstrated on a **7-qubit GHZ state** — a maximally entangled state where al
 
 ---
 
-## 🛠️ Installation & Usage
+## Installation & Usage
 
 ```bash
 # Clone the repo
@@ -118,7 +118,7 @@ jupyter notebook Deutsch-Jozsa.ipynb
 
 ---
 
-## 📁 Repository Structure
+## Repository Structure
 
 ```
 deutsch-jozsa-qiskit/
@@ -129,7 +129,7 @@ deutsch-jozsa-qiskit/
 
 ---
 
-## 🔍 Key Takeaways
+## Key Takeaways
 
 - The Deutsch-Jozsa algorithm is one of the first proofs that quantum computers can solve certain problems **exponentially faster** than any classical algorithm
 - The power comes from **quantum parallelism** (superposition) and **phase kickback** — not from running multiple computations sequentially
